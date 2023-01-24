@@ -45,9 +45,9 @@ const Item = ({ item, width }) => {
           }}
         />
         <Box
-          display={isHovered ? "blocked" : "none"}
+          display={isHovered ? "block" : "none"}
           position="absolute"
-          bottom="0"
+          bottom="10%"
           left="0"
           width="100%"
           padding="0 5%"
