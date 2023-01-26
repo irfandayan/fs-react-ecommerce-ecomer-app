@@ -26,7 +26,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="item/:item" element={<ItemDetails />} />
+          <Route path="item/:itemId" element={<ItemDetails />} />
           <Route path="checkout" element={<Checkout />} />
           <Route path="/success" element={<Confirmation />} />
         </Routes>
