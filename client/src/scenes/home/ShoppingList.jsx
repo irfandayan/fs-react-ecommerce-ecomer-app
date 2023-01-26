@@ -14,7 +14,7 @@ const ShoppingList = () => {
   const items = useSelector((state) => state.cart.items);
   const isNonMobile = useMediaQuery("(min-width:600px)");
 
-  console.log("🚀 ~ file: ShoppingList.jsx:13 ~ ShoppingList ~ items", items);
+  // console.log("🚀 ~ file: ShoppingList.jsx:13 ~ ShoppingList ~ items", items);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

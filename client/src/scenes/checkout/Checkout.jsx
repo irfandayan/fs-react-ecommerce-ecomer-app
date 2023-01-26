@@ -23,6 +23,11 @@ const Checkout = () => {
   const isSecondStep = activeStep === 1;
 
   const handleFormSubmit = async (values, actions) => {
+    // console.log(
+    //   "🚀 ~ file: Checkout.jsx:26 ~ handleFormSubmit ~ values",
+    //   values
+    // );
+
     setActiveStep(activeStep + 1);
 
     // this copies the billing address onto shipping address
@@ -34,6 +39,10 @@ const Checkout = () => {
     }
 
     if (isSecondStep) {
+      // console.log(
+      //   "🚀 ~ file: Checkout.jsx:26 ~ handleFormSubmit ~ values",
+      //   values
+      // );
       makePayment(values);
     }
 
@@ -41,15 +50,34 @@ const Checkout = () => {
   };
 
   async function makePayment(values) {
+    // console.log("🚀 ~ file: Checkout.jsx:53 ~ makePayment ~ values", values);
+    // console.log(
+    //   "🚀 ~ file: Checkout.jsx:63 ~ makePayment ~ values.firstName",
+    //   values.billingAddress.firstName
+    // );
+    // console.log(
+    //   "🚀 ~ file: Checkout.jsx:64 ~ makePayment ~ values.lastName",
+    //   values.billingAddress.lastName
+    // );
+
     const stripe = await stripePromise;
     const requestBody = {
-      userName: [values.firstName, values.lastName].join(" "),
+      userName: [
+        values.billingAddress.firstName,
+        values.billingAddress.lastName,
+      ].join(" "),
       email: values.email,
       products: cart.map(({ id, count }) => ({
         id,
         count,
       })),
     };
+
+    console.log(
+      "🚀 ~ file: Checkout.jsx:63 ~ makePayment ~ requestBody",
+      requestBody
+    );
+
     const response = await fetch("http://localhost:1337/api/orders", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
