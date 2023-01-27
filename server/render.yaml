@@ -3,8 +3,8 @@ services:
     name: strapi
     env: node
     plan: starter
-    buildCommand: yarn install && yarn build
-    startCommand: rsync -a public/ /data/public/ && yarn start
+    buildCommand: npm install && npm run build
+    startCommand: rsync -a public/ /data/public/ && npm start
     healthCheckPath: /_health
     autoDeploy: false
     disk:
@@ -24,3 +24,7 @@ services:
         generateValue: true
       - key: APP_KEYS
         generateValue: true
+      - key: API_TOKEN_SALT
+        generateValue: true
+      - key: STRIPE_SECRET_KEY
+        value: sk_test_51MUPahJTSpQ0bQ3cleWaIplXH7tuhF9Bsv3veHjXMYmc50tFicB9F0cPw5fQbD0YOOgfGIqyj22z5WC1zVWkgY7800Lnkc3wbR
