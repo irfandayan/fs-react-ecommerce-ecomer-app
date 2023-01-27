@@ -38,9 +38,11 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         customer_email: email,
         mode: "payment",
         // success_url: "http://localhost:3000/checkout/success",
-        success_url: "https://client-ecomer.onrender.com/checkout/success",
+        // success_url: "https://client-ecomer.onrender.com/checkout/success",
+        success_url: "https://ecomer3.netlify.app/checkout/success",
         // cancel_url: "http://localhost:3000",
-        cancel_url: "https://client-ecomer.onrender.com/",
+        // cancel_url: "https://client-ecomer.onrender.com/",
+        cancel_url: "https://ecomer3.netlify.app/checkout/success",
         line_items: lineItems,
       });
 
