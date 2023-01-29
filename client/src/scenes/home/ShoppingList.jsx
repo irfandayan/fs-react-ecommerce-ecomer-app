@@ -23,8 +23,7 @@ const ShoppingList = () => {
   async function getItems() {
     const items = await fetch(
       // "http://localhost:1337/api/items?populate=image",
-      // "https://strapi-l6as.onrender.com/api/items?populate=image",
-      "/api/items?populate=image",
+      "https://strapi-l6as.onrender.com/api/items?populate=image",
       {
         method: "GET",
       }

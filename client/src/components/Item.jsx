@@ -39,8 +39,7 @@ const Item = ({ item, width }) => {
           width="300px"
           height="400px"
           // src={`http://localhost:1337${url}`}
-          // src={`https://strapi-l6as.onrender.com${url}`}
-          src={url} // use of proxy
+          src={`https://strapi-l6as.onrender.com${url}`}
           onClick={() => navigate(`/item/${item.id}`)}
           style={{
             cursor: "pointer",
