@@ -80,7 +80,8 @@ const Checkout = () => {
 
     // const response = await fetch("http://localhost:1337/api/orders", {
     const response = await fetch(
-      "https://strapi-l6as.onrender.com/api/orders",
+      // "https://strapi-l6as.onrender.com/api/orders",
+      "/api/orders",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
