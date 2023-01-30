@@ -12,5 +12,6 @@
 <li>Formik + Yup</>
 <li>Stripe Payment</li>
 <li>Depolyment - Netlify</li>
+<li><a href="https://github.com/irfandayan/strapi-server-ecomer"> BackEnd Repo </a></li>
 
 </ul>
